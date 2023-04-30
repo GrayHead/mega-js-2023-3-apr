@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .product-item > img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+
+    </style>
 </head>
 <body>
 <script>
@@ -97,6 +105,15 @@
             image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
         },
     ];
+
+    for (const product of products) {
+        document.write(`
+            <div class="product-item">
+                <h3>${product.title}, price is - ${product.price}</h3>
+                <img src="${product.image}" alt="${product.title}">
+            </div>
+        `);
+    }
 
 
 </script>
